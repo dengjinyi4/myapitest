@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/egouPCUI.iml" filepath="$PROJECT_DIR$/.idea/egouPCUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../egouapp/.idea/egouapp.iml" filepath="$PROJECT_DIR$/../egouapp/.idea/egouapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../emarurl/.idea/emarurl.iml" filepath="$PROJECT_DIR$/../emarurl/.idea/emarurl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../gouwukeui/.idea/gouwukeui.iml" filepath="$PROJECT_DIR$/../gouwukeui/.idea/gouwukeui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../yiqifa/.idea/yiqifa.iml" filepath="$PROJECT_DIR$/../yiqifa/.idea/yiqifa.iml" />
+    </modules>
+  </component>
+</project>
+

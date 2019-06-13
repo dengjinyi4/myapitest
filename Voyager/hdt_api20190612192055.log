@@ -1,0 +1,12 @@
+[INFO] 2019-06-12 19:20:55,278 [hdtapi] at line 26 ]: 已经登录了，already login 
+[INFO] 2019-06-12 19:20:55,278 [hdtapi] at line 27 ]: 分别查询广告报表和汇总报表数据，获得广告消耗字段，进行对比 
+[INFO] 2019-06-12 19:20:55,322 [hdtapi] at line 41 ]: id is 311 
+[INFO] 2019-06-12 19:20:55,322 [hdtapi] at line 42 ]: http://api.admin.adhudong.com/report/totalDetail.htm?filterIds=true_eq_24&allDate=&groupIds=1&order_by=&page=1&page_size=100&dateBegin=datetime_eq_2019/06/05&dateEnd=datetime_eq_2019/06/05 
+[INFO] 2019-06-12 19:20:55,322 [hdtapi] at line 43 ]: {"code":403,"message":"拒绝访问,请重新登陆","data":null} 
+[INFO] 2019-06-12 19:20:55,322 [hdtapi] at line 44 ]: expect_value 50000 
+[INFO] 2019-06-12 19:20:55,335 [hdtapi] at line 26 ]: 已经登录了，already login 
+[INFO] 2019-06-12 19:20:55,335 [hdtapi] at line 27 ]: 分别查询广告报表和汇总报表数据，获得广告消耗字段，进行对比 
+[INFO] 2019-06-12 19:20:55,357 [hdtapi] at line 41 ]: id is 311 
+[INFO] 2019-06-12 19:20:55,357 [hdtapi] at line 42 ]: http://api.admin.adhudong.com/report/totalDetail.htm?filterIds=true_eq_24&allDate=&groupIds=1&order_by=&page=1&page_size=100&dateBegin=datetime_eq_2019/06/05&dateEnd=datetime_eq_2019/06/05 
+[INFO] 2019-06-12 19:20:55,358 [hdtapi] at line 43 ]: {"code":403,"message":"拒绝访问,请重新登陆","data":null} 
+[INFO] 2019-06-12 19:20:55,358 [hdtapi] at line 44 ]: expect_value 50000 

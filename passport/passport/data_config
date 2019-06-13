@@ -1,0 +1,10 @@
+[product_check]
+data = 6748583
+host = 172.16.9.9
+port = 3306
+database = fanxian
+user = egou
+password = egou
+site=1
+id=296560
+sql= SELECT rebate_type FROM brand.sup_product WHERE id=296560

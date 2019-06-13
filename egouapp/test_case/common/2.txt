@@ -1,0 +1,71 @@
+
+--workday：2016-10-08--
+--delsql:--
+delete from CHECKINOUT where CONVERT(char(10),CHECKTIME,120)='2016-10-08' and userid=264
+--checkinsql:--
+INSERT into  [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-08 08:11:40','I',1,102,null,0,'3399162100924',1)
+--checkoutsql:--
+INSERT into [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-08 17:9:15','I',1,102,null,0,'3399162100924',1)
+--workday：2016-10-09--
+--delsql:--
+delete from CHECKINOUT where CONVERT(char(10),CHECKTIME,120)='2016-10-09' and userid=264
+--checkinsql:--
+INSERT into  [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-09 08:11:22','I',1,102,null,0,'3399162100924',1)
+--checkoutsql:--
+INSERT into [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-09 17:8:13','I',1,102,null,0,'3399162100924',1)
+--workday：2016-10-10--
+--delsql:--
+delete from CHECKINOUT where CONVERT(char(10),CHECKTIME,120)='2016-10-10' and userid=264
+--checkinsql:--
+INSERT into  [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-10 08:26:11','I',1,102,null,0,'3399162100924',1)
+--checkoutsql:--
+INSERT into [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-10 17:1:18','I',1,102,null,0,'3399162100924',1)
+--workday：2016-10-11--
+--delsql:--
+delete from CHECKINOUT where CONVERT(char(10),CHECKTIME,120)='2016-10-11' and userid=264
+--checkinsql:--
+INSERT into  [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-11 08:12:12','I',1,102,null,0,'3399162100924',1)
+--checkoutsql:--
+INSERT into [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-11 17:10:22','I',1,102,null,0,'3399162100924',1)
+--workday：2016-10-12--
+--delsql:--
+delete from CHECKINOUT where CONVERT(char(10),CHECKTIME,120)='2016-10-12' and userid=264
+--checkinsql:--
+INSERT into  [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-12 08:17:56','I',1,102,null,0,'3399162100924',1)
+--checkoutsql:--
+INSERT into [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-12 17:9:34','I',1,102,null,0,'3399162100924',1)
+--workday：2016-10-13--
+--delsql:--
+delete from CHECKINOUT where CONVERT(char(10),CHECKTIME,120)='2016-10-13' and userid=264
+--checkinsql:--
+INSERT into  [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-13 08:2:56','I',1,102,null,0,'3399162100924',1)
+--checkoutsql:--
+INSERT into [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-13 17:0:37','I',1,102,null,0,'3399162100924',1)
+--workday：2016-10-14--
+--delsql:--
+delete from CHECKINOUT where CONVERT(char(10),CHECKTIME,120)='2016-10-14' and userid=264
+--checkinsql:--
+INSERT into  [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-14 08:17:44','I',1,102,null,0,'3399162100924',1)
+--checkoutsql:--
+INSERT into [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-14 17:5:47','I',1,102,null,0,'3399162100924',1)
+--workday：2016-10-17--
+--delsql:--
+delete from CHECKINOUT where CONVERT(char(10),CHECKTIME,120)='2016-10-17' and userid=264
+--checkinsql:--
+INSERT into  [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-17 08:10:31','I',1,102,null,0,'3399162100924',1)
+--checkoutsql:--
+INSERT into [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-17 17:8:43','I',1,102,null,0,'3399162100924',1)
+--workday：2016-10-18--
+--delsql:--
+delete from CHECKINOUT where CONVERT(char(10),CHECKTIME,120)='2016-10-18' and userid=264
+--checkinsql:--
+INSERT into  [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-18 08:2:36','I',1,102,null,0,'3399162100924',1)
+--checkoutsql:--
+INSERT into [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-18 17:4:18','I',1,102,null,0,'3399162100924',1)
+--workday：2016-10-19--
+--delsql:--
+delete from CHECKINOUT where CONVERT(char(10),CHECKTIME,120)='2016-10-19' and userid=264
+--checkinsql:--
+INSERT into  [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-19 08:15:47','I',1,102,null,0,'3399162100924',1)
+--checkoutsql:--
+INSERT into [kaoqin].[dbo].[CHECKINOUT] (USERID,CHECKTIME,CHECKTYPE,VERIFYCODE,SENSORID,Memoinfo,WorkCode,sn,UserExtFmt) VALUES (264,'2016-10-19 17:9:29','I',1,102,null,0,'3399162100924',1)

@@ -1,0 +1,39 @@
+[ijifenplus]
+data = 6748583
+host = 172.16.9.9
+port = 3306
+database = fanxian
+user = egou
+password = egou
+award_id1= 8
+award_id2= 39
+award_id3= 11
+
+[message_code]
+data = 6748583
+host = 172.16.9.9
+port = 3306
+database = fanxian
+user = egou
+password = egou
+phone1=18618298667
+phone2=1580153378
+
+
+[apply_exchange]
+host = 172.16.9.9
+port = 3306
+database = fanxian
+user = egou
+password = egou 
+code1= 1234
+phone1=15801533783
+award_id1=8
+alipayCount1=15801533783
+terminal1=4 
+
+phone2=15885255558
+award_id2=8
+alipayCount2=15885255558
+terminal2=4
+sql=SELECT SUBSTRING(msg, 13,6) FROM youhuiplus.phone_send_record   WHERE phone = '15885255558' ORDER BY create_time DESC LIMIT 1;

@@ -1,0 +1,12 @@
+[INFO] 2019-04-25 15:34:57,148 [hdtapi] at line 127 ]: 已经登录了，already login 
+[INFO] 2019-04-25 15:34:57,510 [hdtapi] at line 129 ]: 删除了历史测试数据 
+[INFO] 2019-04-25 15:34:58,408 [hdtapi] at line 163 ]: id is 28 
+[INFO] 2019-04-25 15:34:58,408 [hdtapi] at line 164 ]: https://apidemand.adhudong.com/api/advert/login.htm?password=&name=advagent 
+[INFO] 2019-04-25 15:34:58,408 [hdtapi] at line 165 ]: {"code":302,"message":"","data":["pass_error","密码不能为空"]} 
+[INFO] 2019-04-25 15:34:58,408 [hdtapi] at line 166 ]: expect_value pass_error 
+[INFO] 2019-04-25 15:34:58,697 [hdtapi] at line 127 ]: 已经登录了，already login 
+[INFO] 2019-04-25 15:34:58,987 [hdtapi] at line 129 ]: 删除了历史测试数据 
+[INFO] 2019-04-25 15:34:59,151 [hdtapi] at line 163 ]: id is 28 
+[INFO] 2019-04-25 15:34:59,151 [hdtapi] at line 164 ]: https://apidemand.adhudong.com/api/advert/login.htm?password=&name=advagent 
+[INFO] 2019-04-25 15:34:59,151 [hdtapi] at line 165 ]: {"code":302,"message":"","data":["pass_error","密码不能为空"]} 
+[INFO] 2019-04-25 15:34:59,151 [hdtapi] at line 166 ]: expect_value pass_error 

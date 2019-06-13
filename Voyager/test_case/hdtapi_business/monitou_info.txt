@@ -1,0 +1,9 @@
+ad_id = 959 ,ad_name = 151测试订单111111 ；
+ad_id = 714 ,ad_name = 为了测试图片相似度创意02 ；
+ad_id = 965 ,ad_name = 新建订单投放01 ；
+ad_id = 869 ,ad_name = dfa ；
+ad_id = 930 ,ad_name = wlq_1225_A5_creative ；
+ad_id = 962 ,ad_name = 亿起发直客创意3 ；
+ad_id = 961 ,ad_name = 亿起发直客创意2 ；
+ad_id = 655 ,ad_name = 托底创意 ；
+ad_id = 654 ,ad_name = 恭喜您获得超值优惠券 ；

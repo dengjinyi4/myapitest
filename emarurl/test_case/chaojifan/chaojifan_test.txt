@@ -1,0 +1,32 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+__author__ = 'jinyi'
+import requestegouchaojifan,MySQLdb
+def geturlfromdb(sql):
+    con=MySQLdb.connect(host='172.16.9.9',user='egou',passwd='egou',db='brand',port=3306)
+    cur=con.cursor()
+    cur.execute(sql)
+    data = cur.fetchall()
+    cur.close()
+    con.close()
+    return data
+    pass
+if __name__ == '__main__':
+    tmplist=["17465599","64372476","64390529","64386750","64396114","64384931","64398087","64392241","64386759","64386761"]
+    sql='SELECT * FROM brand.brand_promote_link where id=85017;'
+    for d in geturlfromdb(sql):
+        tuiguangweiidlist=[]
+        for i in range(6,15):
+            url=d[i]
+            print '%s,%s'%(i,url)
+            taobaourl=requestegouchaojifan.get_taobaourl(url).split('_')[3]
+            print taobaourl
+            tuiguangweiidlist.append(taobaourl)
+    print tuiguangweiidlist
+    print tuiguangweiidlist[0]
+    if cmp(tuiguangweiidlist,tmplist):
+        print 'isok'
+    else:
+        print tuiguangweiidlist
+        print tmplist
+

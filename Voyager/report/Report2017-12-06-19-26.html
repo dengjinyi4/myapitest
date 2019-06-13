@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Report_title</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+pre{
+white-space: pre-wrap;       /* css-3 */
+white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+white-space: -pre-wrap;      /* Opera 4-6 */
+white-space: -o-pre-wrap;    /* Opera 7 */
+word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>Report_title</h1>
+<p class='attribute'><strong>Start Time:</strong> 2017-12-06 19:26:49</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:01.834000</p>
+<p class='attribute'><strong>Status:</strong> Pass 16</p>
+
+<p class='description'>Report_description</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_case.hdtapi.hdtapi_un.mytest</td>
+    <td>16</td>
+    <td>16</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',16)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_act_more: 幸运抽奖接口接口200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":200,"data":{"adzone_id":101,"scroll":[{"id":144,"actType":1,"actName":"test-幸运大转盘","bannerImageUrl":"https://img4.adhudong.com/award/201709/08/bbce746ac12fed1afc08da1e20f66644.jpg","freeNum":10,"actRuleInfo":"&lt;p&gt;氛围气氛&lt;/p&gt;&lt;p&gt;ggreqgrewg人&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;GRE我国热舞&lt;/p&gt;&lt;p&gt;GRE我国&lt;/p&gt;&lt;p&gt;GRE我国热&lt;/p&gt;&lt;p&gt;反而却万分委屈&lt;/p&gt;","status":1,"templateId":101,"operator":"test","locationAddress":"https://display.adhudong.com/spread/rotary-table.htm","expand1":"1"},{"id":182,"actType":1,"actName":"扭蛋-红包","bannerImageUrl":"https://img1.adhudong.com/award/201711/30/4b69b1734d769ae4e8a967149f086076.png","freeNum":8,"actRuleInfo":"&lt;p&gt;撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒&lt;/p&gt;","status":1,"templateId":135,"operator":"test","locationAddress":"https://display.adhudong.com/new/gashapon_redbox.html","expand1":"1","expand2":"1"},{"id":163,"actType":1,"actName":"刮刮卡活动","bannerImageUrl":"https://img3.adhudong.com/award/201709/27/9867c921ca0178820b8a37c677876223.jpg","freeNum":10,"actRuleInfo":"&lt;p&gt;参与活动即有机会获得大奖。活动为概率中奖，奖品数量有限，祝君好运。&lt;/p&gt;&lt;p&gt;惊喜一：1000元现金&lt;/p&gt;&lt;p&gt;惊喜二：500元现金&lt;/p&gt;&lt;p&gt;惊喜三：200元现金&lt;/p&gt;&lt;p&gt;惊喜四：100元现金&lt;/p&gt;&lt;p&gt;惊喜五：50元现金&lt;/p&gt;&lt;p&gt;惊喜六：幸运奖&lt;/p&gt;&lt;p&gt;重要声明：&lt;/p&gt;&lt;p&gt;1、实物类奖品将在活动结束后5-10个工作日内安排发货，请耐心等待&lt;/p&gt;&lt;p&gt;2、卡券类奖品使用规则详见卡券介绍页&lt;/p&gt;&lt;p&gt;3、通过非法途径获得奖品的，主办方有权不提供奖品&lt;/p&gt;","status":1,"templateId":109,"operator":"test","locationAddress":"https://display.adhudong.com/spread/scratch-card.htm","expand1":"1"}],"adzone_click_id":"B3W1CD6H1HM5PG9QWX","acts":[{"id":212,"actType":1,"actName":"翻牌新框架","bannerImageUrl":"https://img1.adhudong.com/award/201712/06/4b69b1734d769ae4e8a967149f086076.png","freeNum":8,"actRuleInfo":"&lt;p&gt;阿斯达三大&lt;/p&gt;","status":1,"templateId":145,"locationAddress":"https://display.adhudong.com/new/draw_card.html","expand1":"1"},{"id":211,"actType":1,"actName":"流量花费暖心用九宫格","bannerImageUrl":"https://img3.adhudong.com/award/201712/05/52c7088e9907ae327b09e02f538a6813.png","freeNum":8,"actRuleInfo":"&lt;p&gt;参与活动即有机会获得大奖。活动为概率中奖，奖品数量有限，祝君好运。&lt;/p&gt;&lt;p&gt;惊喜一：1000元现金&lt;/p&gt;&lt;p&gt;惊喜二：500元现金&lt;/p&gt;&lt;p&gt;惊喜三：200元现金&lt;/p&gt;&lt;p&gt;惊喜四：100元现金&lt;/p&gt;&lt;p&gt;惊喜五：50元现金&lt;/p&gt;&lt;p&gt;惊喜六：幸运奖&lt;/p&gt;&lt;p&gt;重要声明：&lt;/p&gt;&lt;p&gt;1、实物类奖品将在活动结束后5-10个工作日内安排发货，请耐心等待&lt;/p&gt;&lt;p&gt;2、卡券类奖品使用规则详见卡券介绍页&lt;/p&gt;&lt;p&gt;3、通过非法途径获得奖品的，主办方有权不提供奖品&lt;/p&gt;","status":1,"templateId":144,"operator":"test","locationAddress":"https://display.adhudong.com/spread/sharp-lottery.htm","expand1":"2","expand2":"2"},{"id":210,"actType":1,"actName":"Sudoku","bannerImageUrl":"https://img4.adhudong.com/award/201712/04/089c376e9519c85ab8ce5fced7c9ea49.jpg","freeNum":10,"actRuleInfo":"&lt;p&gt;活动规则说明：&lt;/p&gt;&lt;p&gt;1.抽奖活动嗨翻天；&lt;/p&gt;&lt;p&gt;2.抽奖活动日期：2017-12-09 到 2018-12-30&lt;/p&gt;&lt;p&gt;3.奖品设置：流量、实物、现金、幸运大奖&lt;/p&gt;&lt;p&gt;4.&lt;span style=\"font-size: 9pt; color: rgb(102, 102, 102); background-color: white;\"&gt;其他：抽中“精美到店礼品”的客户;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;5.数量有限&lt;/p&gt;&lt;p&gt;6.&lt;span style=\"color: rgb(102, 102, 102); font-size: 12px; background-color: rgb(255, 255, 255);\"&gt;先到先得；&lt;/span&gt;&lt;/p&gt;&lt;p&gt;7.&lt;span style=\"color: rgb(102, 102, 102); font-size: 12px; background-color: rgb(255, 255, 255);\"&gt;直接到所选体验馆领取即可;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;8.请关注易购app；&lt;/p&gt;&lt;p&gt;9.易购红包为易币；&lt;/p&gt;&lt;p&gt;10.不得作弊；&lt;/p&gt;&lt;p&gt;11.活动解释权；&lt;/p&gt;&lt;p&gt;12.敬请&lt;/p&gt;&lt;p&gt;13.&lt;/p&gt;&lt;p&gt;14.&lt;/p&gt;&lt;p&gt;15.&lt;/p&gt;","status":1,"templateId":144,"operator":"test","locationAddress":"https://display.adhudong.com/spread/sharp-lottery.htm","expand1":"1"},{"id":209,"actType":1,"actName":"随机推荐活动","bannerImageUrl":"https://img3.adhudong.com/award/201712/04/9867c921ca0178820b8a37c677876223.jpg","freeNum":8,"actRuleInfo":"&lt;p&gt;活动规则说明：&lt;/p&gt;&lt;p&gt;1.该活动100%中奖；&lt;/p&gt;&lt;p&gt;2.请积极参与该抽奖，精彩大奖等着你！&lt;/p&gt;&lt;p&gt;3.中奖请留言、留联系方式；&lt;/p&gt;&lt;p&gt;4.最终解释权由中体公司拥有；&lt;/p&gt;&lt;p&gt;5.活动时间：2017-12-09 到 2019-01-20&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;","status":1,"templateId":143,"locationAddress":"https://display.adhudong.com/spread/lottery_machine.htm","expand1":"2","expand2":"1"},{"id":207,"actType":1,"actName":"1sss","bannerImageUrl":"https://img3.adhudong.com/award/201712/01/9867c921ca0178820b8a37c677876223.jpg","freeNum":8,"status":1,"templateId":140,"locationAddress":"www.baidu.com","expand1":"1"},{"id":205,"actType":1,"actName":"wlq_test_老虎机","bannerImageUrl":"https://img3.adhudong.com/award/201712/01/9867c921ca0178820b8a37c677876223.jpg","freeNum":8,"actRuleInfo":"&lt;p&gt;活动规则说明：&lt;/p&gt;&lt;p&gt;1该活动由公司具有最终解释权。&lt;/p&gt;&lt;p&gt;2.共有5个奖项；&lt;/p&gt;&lt;p&gt;3.奖项多多；&lt;/p&gt;&lt;p&gt;4.奖项诱人&lt;/p&gt;","status":1,"templateId":143,"operator":"test","locationAddress":"https://display.adhudong.com/spread/lottery_machine.htm","expand1":"1"},{"id":201,"actType":1,"actName":"chenliang","bannerImageUrl":"https://img0.adhudong.com/award/201712/01/eede17507b7f1f69cb3b4a456c757caf.jpg","freeNum":8,"status":1,"templateId":140,"locationAddress":"www.baidu.com","expand1":"1"},{"id":200,"actType":1,"actName":"liang","bannerImageUrl":"https://img0.adhudong.com/award/201712/01/eede17507b7f1f69cb3b4a456c757caf.jpg","freeNum":7,"status":1,"templateId":140,"locationAddress":"www.baidu.com","expand1":"1"},{"id":196,"actType":1,"actName":"扭蛋测试","bannerImageUrl":"https://img2.adhudong.com/award/201712/01/58c8d3a8c92c81c4a219c4f77a78b022.jpg","freeNum":2,"actRuleInfo":"&lt;p&gt;发大水发达的发打扫房间还看过空间和空间和科技好了&lt;/p&gt;","status":1,"templateId":135,"operator":"test","locationAddress":"https://display.adhudong.com/new/gashapon_redbox.html","expand1":"2","expand2":"2"},{"id":192,"actType":1,"actName":"wlq_活动","bannerImageUrl":"https://img3.adhudong.com/award/201711/30/9867c921ca0178820b8a37c677876223.jpg","freeNum":25,"status":1,"templateId":56,"operator":"test","locationAddress":"display.adhudong.com/spread/scratch-card.htm","expand1":"1"},{"id":186,"actType":1,"actName":"测试一个活动","bannerImageUrl":"https://img0.adhudong.com/award/201711/30/eede17507b7f1f69cb3b4a456c757caf.jpg","freeNum":5,"actRuleInfo":"&lt;p&gt;反倒是哒是发大水发大厦发啊都是&lt;/p&gt;","status":1,"templateId":136,"operator":"test","locationAddress":"https://display.adhudong.com/spread/rotary-table.htm","expand1":"2","expand2":"2"},{"id":185,"actType":1,"actName":"123456","bannerImageUrl":"https://img0.adhudong.com/award/201711/30/eede17507b7f1f69cb3b4a456c757caf.jpg","freeNum":2,"status":1,"templateId":140,"operator":"test","locationAddress":"www.baidu.com","expand1":"1","expand2":"2"},{"id":184,"actType":1,"actName":"1234","bannerImageUrl":"https://img0.adhudong.com/award/201711/28/eede17507b7f1f69cb3b4a456c757caf.jpg","freeNum":8,"status":1,"templateId":140,"operator":"test","locationAddress":"www.baidu.com","expand1":"1","expand2":"2"},{"id":182,"actType":1,"actName":"扭蛋-红包","bannerImageUrl":"https://img1.adhudong.com/award/201711/30/4b69b1734d769ae4e8a967149f086076.png","freeNum":8,"actRuleInfo":"&lt;p&gt;撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒撒旦飞洒的发撒的飞洒&lt;/p&gt;","status":1,"templateId":135,"operator":"test","locationAddress":"https://display.adhudong.com/new/gashapon_redbox.html","expand1":"1","expand2":"1"},{"id":181,"actType":1,"actName":"扭蛋新框架","bannerImageUrl":"https://img1.adhudong.com/award/201711/21/4b69b1734d769ae4e8a967149f086076.png","freeNum":2,"actRuleInfo":"&lt;p&gt;活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则活动规则规则1111111111111111112222222222222222222222233333333333333333333333444444444444444444444444555555555555555555555555555555555555555&lt;/p&gt;","status":1,"templateId":134,"operator":"test","locationAddress":"https://display.adhudong.com/new/gashapon.html","expand1":"1","expand2":"2"},{"id":180,"actType":1,"actName":"转盘皮肤-周伟-4x","bannerImageUrl":"https://img2.adhudong.com/award/201711/20/3984f22734ed8ac2b2356c7e98cab6b2.png","freeNum":5,"actRuleInfo":"&lt;p&gt;1.天猫红包领取时间：2017年1月6日0点-2017年1月7日24点；&amp;nbsp;&lt;/p&gt;&lt;p&gt;2.天猫红包使用时间：1月8日至1月11日；&amp;nbsp;&lt;/p&gt;&lt;p&gt;3.易购红包为易币（可兑换集分宝，直接购物使用哦），直接发到易购账户中；&amp;nbsp;&lt;/p&gt;&lt;p&gt;4.红包数量有限，先到先得哦，更多精彩，请关注易购app；&amp;nbsp;&lt;/p&gt;&lt;p&gt;5.1月6日0:00-1:00时间段参与领红包的用户中随机抽取一名奖励iPad pro一台；1月6日01:00-10:00时间段参与领红包的用户中随机抽取一名奖励iPad pro一台；1月6日10:00-20:00时间段参与领红包的用户中随机抽取一名奖励iPad pro一台；&amp;nbsp;&lt;/p&gt;&lt;p&gt;6.相同淘宝账号、手机号、支付宝账号均视为同一用户，一旦发现作弊易购网有权取消用户所得；&amp;nbsp;&lt;/p&gt;&lt;p&gt;7. 在易购下单使用淘宝红包无返利哦；&amp;nbsp;&lt;/p&gt;&lt;p&gt;8.本活动最终解释权归易购网所有。&lt;/p&gt;","status":1,"templateId":137,"operator":"test","locationAddress":"https://display.adhudong.com/spread/rotary-table.htm","expand1":"1"},{"id":179,"actType":1,"actName":"轮盘皮肤2","bannerImageUrl":"https://img1.adhudong.com/award/201711/15/4b69b1734d769ae4e8a967149f086076.png","freeNum":8,"actRuleInfo":"&lt;p&gt;啊实打实&lt;/p&gt;","status":1,"templateId":130,"operator":"test","locationAddress":"https://display.adhudong.com/spread/rotary-table.htm","expand1":"1","expand2":"2"},{"id":178,"actType":1,"actName":"砸蛋新皮肤活动","bannerImageUrl":"https://img3.adhudong.com/award/201711/15/9867c921ca0178820b8a37c677876223.jpg","freeNum":8,"actRuleInfo":"&lt;p&gt;砸蛋新皮肤活动&lt;/p&gt;","status":1,"templateId":129,"operator":"test","locationAddress":"https://display.adhudong.com/new/smash_egg_winter.html","expand1":"1","expand2":"2"},{"id":177,"actType":1,"actName":"test3","bannerImageUrl":"https://img0.adhudong.com/award/201711/13/eede17507b7f1f69cb3b4a456c757caf.jpg","freeNum":8,"status":1,"templateId":117,"operator":"test","locationAddress":"https://display.adhudong.com/spread/sharp-lottery.htm","expand1":"1","expand2":"2"},{"id":176,"actType":1,"actName":"砸蛋新框架","bannerImageUrl":"https://img1.adhudong.com/award/201711/04/4b69b1734d769ae4e8a967149f086076.png","freeNum":8,"beginTime":"2017-11-01 11:35:05","endTime":"2017-11-09 11:35:10","actRuleInfo":"&lt;p&gt;参与活动即有机会获得大奖。活动为概率中奖，奖品数量有限，祝君好运。&lt;/p&gt;&lt;p&gt;惊喜一：小米6一部&lt;/p&gt;&lt;p&gt;惊喜二：500元现金红包&lt;/p&gt;&lt;p&gt;惊喜三：100元话费充值卡&lt;/p&gt;&lt;p&gt;惊喜四：2G全国流量&lt;/p&gt;&lt;p&gt;惊喜五：幸运奖&lt;/p&gt;&lt;p&gt;重要声明：&lt;/p&gt;&lt;p&gt;1、实物类奖品将在活动结束后5-10个工作日内安排发货，请耐心等待&lt;/p&gt;&lt;p&gt;2、卡券类奖品使用规则详见卡券介绍页&lt;/p&gt;&lt;p&gt;3、通过非法途径获得奖品的，主办方有权不提供奖品&lt;/p&gt;","status":1,"templateId":122,"operator":"test","locationAddress":"https://display.adhudong.com/new/smash_egg.html","expand1":"1","expand2":"2"},{"id":175,"actType":1,"actName":"niudan","bannerImageUrl":"https://img0.adhudong.com/award/201711/03/ec1f7b806bc25806ee0f4c4109c608fa.jpg","freeNum":1,"actRuleInfo":"&lt;p&gt;32132&lt;/p&gt;","status":1,"templateId":121,"operator":"test","locationAddress":"https://display.adhudong.com/spread/Gashapon.htm","expand1":"1","expand2":"2"},{"id":174,"actType":1,"actName":"扭蛋机","bannerImageUrl":"https://img1.adhudong.com/award/201711/30/4b69b1734d769ae4e8a967149f086076.png","freeNum":80,"actRuleInfo":"&lt;p&gt;撒打算打算&lt;/p&gt;","status":1,"templateId":120,"operator":"test","locationAddress":"https://display.adhudong.com/spread/Gashapon.htm","expand1":"1"},{"id":172,"actType":1,"actName":"抓娃娃1025","bannerImageUrl":"https://img1.adhudong.com/award/201710/25/4b69b1734d769ae4e8a967149f086076.png","freeNum":5,"actRuleInfo":"&lt;p&gt;啊撒大声地&lt;/p&gt;","status":1,"templateId":118,"operator":"test","locationAddress":"https://display.adhudong.com/spread/lottery-claw.htm","expand1":"1"},{"id":171,"actType":1,"actName":"套牛1","bannerImageUrl":"https://img0.adhudong.com/award/201710/30/ec1f7b806bc25806ee0f4c4109c608fa.jpg","freeNum":8,"actRuleInfo":"&lt;p&gt;参与活动即有机会获得大奖。活动为概率中奖，奖品数量有限，祝君好运。&lt;/p&gt;&lt;p&gt;惊喜一：小米6一部&lt;/p&gt;&lt;p&gt;惊喜二：500元现金红包&lt;/p&gt;&lt;p&gt;惊喜三：100元话费充值卡&lt;/p&gt;&lt;p&gt;惊喜四：2G全国流量&lt;/p&gt;&lt;p&gt;惊喜五：幸运奖&lt;/p&gt;&lt;p&gt;重要声明：&lt;/p&gt;&lt;p&gt;1、实物类奖品将在活动结束后5-10个工作日内安排发货，请耐心等待&lt;/p&gt;&lt;p&gt;2、卡券类奖品使用规则详见卡券介绍页&lt;/p&gt;&lt;p&gt;3、通过非法途径获得奖品的，主办方有权不提供奖品&lt;/p&gt;","status":1,"templateId":116,"operator":"test","locationAddress":"https://display.adhudong.com/new/steer_roping.html","expand1":"1"},{"id":170,"actType":1,"actName":"抓娃娃测试1024","bannerImageUrl":"https://img1.adhudong.com/award/201710/24/4b69b1734d769ae4e8a967149f086076.png","freeNum":1,"actRuleInfo":"&lt;p&gt;阿萨大大&lt;/p&gt;","status":1,"templateId":114,"operator":"test","locationAddress":"https://display.adhudong.com/spread/lottery-claw.htm","expand1":"1","expand2":"2"},{"id":169,"actType":1,"actName":"套牛活动","bannerImageUrl":"https://img0.adhudong.com/award/201710/23/3581db00b4d1232a5824fd77883e751f.png","freeNum":100,"actRuleInfo":"&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;&lt;p&gt;这是活动规则，我得多加点，保证可以出滚动条的长度&lt;/p&gt;","status":1,"templateId":115,"operator":"test","locationAddress":"https://display.adhudong.com/new/steer_roping.html","expand1":"1","expand2":"2"},{"id":168,"actType":1,"actName":"抓娃娃测试","bannerImageUrl":"https://img1.adhudong.com/award/201710/19/4b69b1734d769ae4e8a967149f086076.png","freeNum":1,"actRuleInfo":"&lt;p&gt;抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！抓娃娃测试活动规则文案！&lt;/p&gt;","status":1,"templateId":114,"operator":"test","locationAddress":"https://display.adhudong.com/spread/lottery-claw.htm","expand1":"1","expand2":"2"},{"id":17,"actType":1,"actName":"九宫格测试活动","bannerImageUrl":"https://img0.adhudong.com/award/201710/23/ec1f7b806bc25806ee0f4c4109c608fa.jpg","freeNum":2,"actRuleInfo":"&lt;p&gt;分VCv11343434&lt;/p&gt;","status":1,"templateId":102,"operator":"test","locationAddress":"https://display.adhudong.com/spread/sharp-lottery.htm","expand1":"1","expand2":"2"},{"id":166,"actType":1,"actName":"老虎机活动kqf","bannerImageUrl":"https://img4.adhudong.com/award/201710/23/fd9566dac80cd2ccf262afb74a9a847e.jpg","freeNum":4,"actRuleInfo":"&lt;p&gt;天猫红包领取时间&lt;/p&gt;&lt;p&gt;2017年1月6日0点-2017年1月7日24点；&lt;/p&gt;&lt;p&gt;易购红包为易币（可兑换集分宝，直接购物使用 哦），直接发到易购账户中；&lt;/p&gt;&lt;p&gt;红包数量有限，先到先得哦，更多精彩，请关注易购app；&lt;/p&gt;&lt;p&gt;相同淘宝账号、手机号、支付宝账号均视为同一用户，一旦发现作弊易购网有权取消用户所得；&lt;/p&gt;&lt;p&gt;在易购下单使用淘宝红包无返利哦；&lt;/p&gt;&lt;p&gt;本活动最终解释权归易购网所有。&lt;/p&gt;&lt;p&gt;天猫红包领取时间&lt;/p&gt;&lt;p&gt;111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111&lt;/p&gt;&lt;p&gt;111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111&lt;/p&gt;&lt;p&gt;2相同淘宝账号、手机号、支付宝账号均视为同一用户，一旦发现作弊易购网有权取消用户所得；相同淘宝账号、手机号、支付宝账号均视为同一用户，一旦发现作弊易购网有权取消用户所得；相同淘宝账号、手机号、支付宝账号均视为同一用户，一旦发现作弊易购网有权取消用户所得；相同淘宝账号、手机号、支付宝账号均视为同一用户，一旦发现作弊易购网有权取消用户所得；&lt;/p&gt;","status":1,"templateId":111,"operator":"test","locationAddress":"https://display.adhudong.com/spread/lottery_machine.htm","expand1":"1"},{"id":165,"actType":1,"actName":"新轮盘抽奖","bannerImageUrl":"https://img4.adhudong.com/award/201710/23/fd9566dac80cd2ccf262afb74a9a847e.jpg","freeNum":8,"actRuleInfo":"&lt;p&gt;最新版本的抽奖活动&lt;/p&gt;","status":1,"templateId":112,"operator":"test","locationAddress":"https://display.adhudong.com/spread/rotary-tableTe.htm","expand1":"1"},{"id":164,"actType":1,"actName":"翻牌徐利测试","bannerImageUrl":"https://img1.adhudong.com/award/201709/28/4b69b1734d769ae4e8a967149f086076.png","freeNum":20,"actRuleInfo":"&lt;p&gt;爱上发大水发放啊实打实大的法师打发&lt;/p&gt;&lt;p&gt;爱上发大水发放啊实打实大的法师打发&lt;/p&gt;&lt;p&gt;爱上发大水发放啊实打实大的法师打发&lt;/p&gt;&lt;p&gt;爱上发大水发放啊实打实大的法师打发&lt;/p&gt;&lt;p&gt;爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大的法师打发爱上发大水发放啊实打实大&lt;/p&gt;","status":1,"templateId":110,"operator":"test","locationAddress":"https://display.adhudong.com/spread/draw-card.htm","expand1":"1","expand2":"1"},{"id":163,"actType":1,"actName":"刮刮卡活动","bannerImageUrl":"https://img3.adhudong.com/award/201709/27/9867c921ca0178820b8a37c677876223.jpg","freeNum":10,"actRuleInfo":"&lt;p&gt;参与活动即有机会获得大奖。活动为概率中奖，奖品数量有限，祝君好运。&lt;/p&gt;&lt;p&gt;惊喜一：1000元现金&lt;/p&gt;&lt;p&gt;惊喜二：500元现金&lt;/p&gt;&lt;p&gt;惊喜三：200元现金&lt;/p&gt;&lt;p&gt;惊喜四：100元现金&lt;/p&gt;&lt;p&gt;惊喜五：50元现金&lt;/p&gt;&lt;p&gt;惊喜六：幸运奖&lt;/p&gt;&lt;p&gt;重要声明：&lt;/p&gt;&lt;p&gt;1、实物类奖品将在活动结束后5-10个工作日内安排发货，请耐心等待&lt;/p&gt;&lt;p&gt;2、卡券类奖品使用规则详见卡券介绍页&lt;/p&gt;&lt;p&gt;3、通过非法途径获得奖品的，主办方有权不提供奖品&lt;/p&gt;","status":1,"templateId":109,"operator":"test","locationAddress":"https://display.adhudong.com/spread/scratch-card.htm","expand1":"1"},{"id":162,"actType":1,"actName":"新转盘","bannerImageUrl":"https://img1.adhudong.com/award/201709/27/4b69b1734d769ae4e8a967149f086076.png","freeNum":2,"actRuleInfo":"&lt;p&gt;上第三方士大夫的发撒的飞洒&lt;/p&gt;","status":1,"templateId":108,"operator":"test","locationAddress":"https://display.adhudong.com/spread/rotary-table.htm","expand1":"1"},{"id":161,"actType":1,"actName":"国庆砸蛋一","bannerImageUrl":"https://img2.adhudong.com/award/201709/25/58c8d3a8c92c81c4a219c4f77a78b022.jpg","freeNum":3,"actRuleInfo":"&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好q&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;&lt;p&gt;你好你好你好你好你好你好你好你好你好你好&lt;/p&gt;","status":1,"templateId":107,"operator":"cczz","locationAddress":"https://display.adhudong.com/spread/smash-eggNEW.htm","expand1":"1"},{"id":160,"actType":1,"actName":"砸蛋国庆","bannerImageUrl":"https://img1.adhudong.com/award/201709/21/4b69b1734d769ae4e8a967149f086076.png","freeNum":20,"actRuleInfo":"&lt;p&gt;啊撒打算打算安达市11111111111111111111111&lt;/p&gt;","status":1,"templateId":107,"operator":"test","locationAddress":"https://display.adhudong.com/spread/smash-eggNEW.htm","expand1":"1"},{"id":148,"actType":1,"actName":"九宫格活动913","bannerImageUrl":"https://img2.adhudong.com/award/201709/13/58c8d3a8c92c81c4a219c4f77a78b022.jpg","freeNum":10,"actRuleInfo":"&lt;p&gt;参与活动即有机会获得大奖。活动为概率中奖，奖品数量有限，祝君好运。&lt;/p&gt;&lt;p&gt;惊喜一：小米6一部&lt;/p&gt;&lt;p&gt;惊喜二：500元现金红包&lt;/p&gt;&lt;p&gt;惊喜三：100元话费充值卡&lt;/p&gt;&lt;p&gt;惊喜四：2G全国流量&lt;/p&gt;&lt;p&gt;惊喜五：幸运奖&lt;/p&gt;&lt;p&gt;重要声明：&lt;/p&gt;&lt;p&gt;1、实物类奖品将在活动结束后5-10个工作日内安排发货，请耐心等待&lt;/p&gt;&lt;p&gt;2、卡券类奖品使用规则详见卡券介绍页&lt;/p&gt;&lt;p&gt;3、通过非法途径获得奖品的，主办方有权不提供奖品&lt;/p&gt;","status":1,"templateId":144,"operator":"test","locationAddress":"https://display.adhudong.com/spread/sharp-lottery.htm","expand1":"1"},{"id":147,"actType":1,"actName":"九宫格测试912","bannerImageUrl":"https://img1.adhudong.com/award/201709/12/4b69b1734d769ae4e8a967149f086076.png","freeNum":8,"actRuleInfo":"&lt;p&gt;阿斯达大神大神的啊大叔大婶1&lt;/p&gt;","status":1,"templateId":102,"operator":"test","locationAddress":"https://display.adhudong.com/spread/sharp-lottery.htm","expand1":"1"},{"id":146,"actType":1,"actName":"砸蛋活动第一个","bannerImageUrl":"https://img2.adhudong.com/award/201709/11/58c8d3a8c92c81c4a219c4f77a78b022.jpg","freeNum":2,"actRuleInfo":"&lt;p&gt;砸蛋第一个？？？？？？？？？？？？？？？&lt;/p&gt;&lt;p&gt;&lt;span style=\"background-color: rgb(255, 255, 255); font-size: 13px; font-family: arial; color: rgb(51, 51, 51);\"&gt;草料二维码是国内专业的二维码服务提供商,提供&lt;/span&gt;&lt;span style=\"background-color: rgb(255, 255, 255); font-size: 13px; font-family: arial; color: rgb(204, 0, 0);\"&gt;二维码生成&lt;/span&gt;&lt;span style=\"background-color: rgb(255, 255, 255); font-size: 13px; font-family: arial; color: rgb(51, 51, 51);\"&gt;,美化,印制,管理,统计等服务,帮助企业通过二维码展示3&lt;/span&gt;&lt;/p&gt;","status":1,"templateId":103,"operator":"test","locationAddress":"https://display.adhudong.com/spread/smash-egg.htm","expand1":"1"},{"id":145,"actType":1,"actName":"九宫格千元红包活动","bannerImageUrl":"https://img3.adhudong.com/award/201709/11/d5ca97fdcaecc0df89833b80ec5f63ed.png","freeNum":8,"actRuleInfo":"&lt;p&gt;参与活动即有机会获得大奖。活动为概率中奖，奖品数量有限，祝君好运。&lt;/p&gt;&lt;p&gt;惊喜一：1000元现金&lt;/p&gt;&lt;p&gt;惊喜二：500元现金&lt;/p&gt;&lt;p&gt;惊喜三：200元现金&lt;/p&gt;&lt;p&gt;惊喜四：100元现金&lt;/p&gt;&lt;p&gt;惊喜五：50元现金&lt;/p&gt;&lt;p&gt;惊喜六：幸运奖&lt;/p&gt;&lt;p&gt;重要声明：&lt;/p&gt;&lt;p&gt;1、实物类奖品将在活动结束后5-10个工作日内安排发货，请耐心等待&lt;/p&gt;&lt;p&gt;2、卡券类奖品使用规则详见卡券介绍页&lt;/p&gt;&lt;p&gt;3、通过非法途径获得奖品的，主办方有权不提供奖品&lt;/p&gt;","status":1,"templateId":144,"operator":"test","locationAddress":"https://display.adhudong.com/spread/sharp-lottery.htm","expand1":"1"},{"id":144,"actType":1,"actName":"test-幸运大转盘","bannerImageUrl":"https://img4.adhudong.com/award/201709/08/bbce746ac12fed1afc08da1e20f66644.jpg","freeNum":10,"actRuleInfo":"&lt;p&gt;氛围气氛&lt;/p&gt;&lt;p&gt;ggreqgrewg人&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;GRE我国热舞&lt;/p&gt;&lt;p&gt;GRE我国&lt;/p&gt;&lt;p&gt;GRE我国热&lt;/p&gt;&lt;p&gt;反而却万分委屈&lt;/p&gt;","status":1,"templateId":101,"operator":"test","locationAddress":"https://display.adhudong.com/spread/rotary-table.htm","expand1":"1"},{"id":125,"actType":1,"actName":"砸金蛋活动","bannerImageUrl":"https://img2.adhudong.com/award/201709/07/58c8d3a8c92c81c4a219c4f77a78b022.jpg","freeNum":80,"actRuleInfo":"&lt;p&gt;砸金蛋测试砸金蛋测试砸金蛋测试砸金蛋测试砸金蛋测试砸金蛋测试砸金蛋测试vvvvvv&lt;/p&gt;&lt;p&gt;砸金蛋测试砸金蛋测试砸金蛋测试砸金蛋测试砸&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;砸金蛋测试砸金蛋测试砸金蛋测试砸金蛋测试砸金蛋测试&lt;/p&gt;&lt;p&gt;砸金蛋测试砸金蛋测试&lt;/p&gt;&lt;p&gt;砸金蛋测试砸金蛋测试&lt;/p&gt;&lt;p&gt;砸金蛋测试&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;砸金蛋测试砸金蛋测试砸金蛋测试砸金蛋测试砸金蛋测试&lt;/p&gt;&lt;p&gt;砸金蛋测试砸金蛋测试&lt;/p&gt;&lt;p&gt;砸金蛋测试砸金蛋测试&lt;/p&gt;&lt;p&gt;砸金蛋测试&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;","status":1,"templateId":86,"operator":"test","locationAddress":"https://display.adhudong.com/spread/smash-egg.htm","expand1":"1"},{"id":115,"actType":1,"actName":"砸蛋抽奖活动","bannerImageUrl":"https://img0.adhudong.com/award/201710/23/ec1f7b806bc25806ee0f4c4109c608fa.jpg","freeNum":10,"actRuleInfo":"&lt;p&gt;1.天猫红包领取时间2017年1月6日0点-2017年1月7日24点；&lt;/p&gt;&lt;p&gt;2.天猫红包使用时间：1月8日至1月11日；易购红包为易币（可兑换集分宝，直接购物使用哦），直接发到易购账户中；&lt;/p&gt;&lt;p&gt;3.红包数量有限，先到先得哦，更多精彩，请关注易购app；&lt;/p&gt;","status":1,"templateId":84,"operator":"test","locationAddress":"https://display.adhudong.com/spread/smash-egg.htm","expand1":"1"},{"id":113,"actType":1,"actName":"抓娃娃活动1","bannerImageUrl":"https://img2.adhudong.com/award/201709/06/58c8d3a8c92c81c4a219c4f77a78b022.jpg","freeNum":8,"actRuleInfo":"&lt;p&gt;放大放大发是&lt;/p&gt;","status":1,"templateId":80,"locationAddress":"http://fdafdsa.fdafas","expand1":"1"},{"id":112,"actType":1,"actName":"运营临时活动","bannerImageUrl":"https://img3.adhudong.com/award/201708/30/9867c921ca0178820b8a37c677876223.jpg","freeNum":8,"actRuleInfo":"&lt;p&gt;的 &lt;/p&gt;","status":1,"templateId":77,"locationAddress":"https://display.adhudong.com/spread/specialHref.htm","expand1":"1"},{"id":108,"actType":1,"actName":"轮盘抽奖测试0828","bannerImageUrl":"http://img3.adhudong.com/award/201708/28/9867c921ca0178820b8a37c677876223.jpg","freeNum":3,"actRuleInfo":"&lt;p&gt;敖德萨多&lt;/p&gt;","status":1,"templateId":68,"operator":"test","locationAddress":"http://display.adhudong.com/spread/rotary-table.htm","expand1":"1"},{"id":107,"actType":1,"actName":"徐丽测试8281","bannerImageUrl":"http://img3.adhudong.com/award/201708/28/d5ca97fdcaecc0df89833b80ec5f63ed.png","freeNum":8,"actRuleInfo":"&lt;p&gt;撒打算&lt;/p&gt;","status":1,"templateId":56,"locationAddress":"display.adhudong.com/spread/scratch-card.htm","expand1":"1"},{"id":106,"actType":1,"actName":"徐丽测试828","bannerImageUrl":"http://img3.adhudong.com/award/201708/28/d5ca97fdcaecc0df89833b80ec5f63ed.png","freeNum":3,"beginTime":"2017-08-28 00:00:00","status":1,"templateId":56,"locationAddress":"display.adhudong.com/spread/scratch-card.htm","expand1":"1"},{"id":105,"actType":1,"actName":"轮盘抽奖活动","bannerImageUrl":"https://img4.adhudong.com/award/201710/23/fd9566dac80cd2ccf262afb74a9a847e.jpg","freeNum":2,"beginTime":"2017-08-28 00:00:00","actRuleInfo":"&lt;p&gt;轮盘抽奖活动&lt;/p&gt;","status":1,"templateId":68,"operator":"test","locationAddress":"http://display.adhudong.com/spread/rotary-table.htm","expand1":"1"},{"id":97,"actType":1,"actName":"抽奖活动0824","bannerImageUrl":"http://img3.adhudong.com/award/201708/24/b628f6d75cf9fbf11c223d4d97572d63.jpg","freeNum":8,"actRuleInfo":"&lt;p&gt;山东省第三代&lt;/p&gt;","status":1,"templateId":71,"operator":"test","locationAddress":"http://display.adhudong.com/spread/rotary-table.htm","expand1":"1"},{"id":94,"actType":1,"actName":"抽奖活动测试0822","bannerImageUrl":"http://img0.adhudong.com/award/201708/24/be5084b2d09545fbfce52bfd6b5c219f.jpg","freeNum":9,"beginTime":"2017-08-22 00:00:00","endTime":"2017-08-31 23:59:59","actRuleInfo":"&lt;p&gt;从山东省第三代&lt;/p&gt;","status":1,"templateId":68,"operator":"test","locationAddress":"http://display.adhudong.com/spread/rotary-table.htm","expand1":"1"},{"id":87,"actType":1,"actName":"抽奖111111","bannerImageUrl":"http://img4.adhudong.com/award/201708/24/120319c8c23d4d9b478dab5434a0efb9.jpg","freeNum":8,"beginTime":"2017-08-22 00:00:00","endTime":"2017-08-31 23:59:59","status":1,"templateId":55,"operator":"test","locationAddress":"display.adhudong.com/spread/rotary-table.htm","expand1":"1"},{"id":86,"actType":1,"actName":"测试抽奖活动","bannerImageUrl":"http://img1.adhudong.com/award/201708/24/0b570e6907a926ac0b843f34f300a681.jpg","freeNum":8,"beginTime":"2017-08-22 00:00:00","endTime":"2017-08-23 23:59:59","actRuleInfo":"&lt;p&gt;的浮层山东省第三代&lt;/p&gt;","status":1,"templateId":68,"operator":"test","locationAddress":"http://display.adhudong.com/spread/rotary-table.htm","expand1":"1"},{"id":75,"actType":1,"actName":"轮盘抽奖活动艾丁华4","bannerImageUrl":"http://img0.adhudong.com/award/201708/21/e9297c6142b10afc78c222a8cff15255.jpg","freeNum":8,"beginTime":"2017-08-21 00:00:00","endTime":"2017-09-10 23:59:59","actRuleInfo":"&lt;p&gt;水电费臭豆腐的首付多少 &lt;/p&gt;","status":1,"templateId":68,"locationAddress":"http://display.adhudong.com/spread/rotary-table.htm","expand1":"1"},{"id":74,"actType":1,"actName":"轮盘抽奖活动艾丁华3","bannerImageUrl":"http://img0.adhudong.com/award/201708/21/e9297c6142b10afc78c222a8cff15255.jpg","freeNum":8,"beginTime":"2017-08-21 00:00:00","endTime":"2017-08-31 23:59:59","actRuleInfo":"&lt;p&gt;是多返的辅导费&lt;/p&gt;","status":1,"templateId":68,"locationAddress":"http://display.adhudong.com/spread/rotary-table.htm","expand1":"1"},{"id":73,"actType":1,"actName":"轮盘抽奖活动艾丁华2","bannerImageUrl":"http://img0.adhudong.com/award/201708/21/e9297c6142b10afc78c222a8cff15255.jpg","freeNum":8,"beginTime":"2017-08-21 00:00:00","endTime":"2017-09-10 23:59:59","actRuleInfo":"&lt;p&gt; &amp;lt;p&amp;gt;活动说明：参与活动即有机会获得幸运奖，每天7次免费抽奖机会。此活动为概率中奖，奖品数量有限，祝君好运。&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;惊喜一：iPhone 7 手机&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;惊喜二：600元现金红包&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;惊喜三：100元话费充值卡&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;惊喜四：幸运礼包&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;lt;p&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;重要声明：&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;1、实物类奖品将在活动结束后5-10个工作日内安排发货，请耐心等待&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;2、优惠券类奖品的使用规则详见优惠券介绍页&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;3、通过非法途径获得奖品的，主办方有权不提供奖品&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;4、本页面内容由第三方亿玛创新网络（天津）有限公司提供&amp;lt;/p&amp;gt;&lt;/p&gt;","status":1,"templateId":68,"locationAddress":"http://display.adhudong.com/spread/rotary-table.htm","expand1":"1"},{"id":66,"actType":1,"actName":"轮盘抽奖艾丁华","bannerImageUrl":"http://img0.adhudong.com/award/201708/21/e9297c6142b10afc78c222a8cff15255.jpg","freeNum":8,"beginTime":"2017-08-21 00:00:00","endTime":"2017-09-30 23:59:59","actRuleInfo":"&lt;p&gt;&amp;lt;p&amp;gt;活动说明：参与活动即有机会获得幸运奖，每天7次免费抽奖机会。此活动为概率中奖，奖品数量有限，祝君好运。&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;惊喜一：888元大红包&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;惊喜二：10元红包&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;惊喜三：5元红包&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;惊喜四：2元红包&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;惊喜五：1元红包&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;惊喜六：幸运福袋&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;lt;p&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;重要声明：&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;1、实物类奖品将在活动结束后5-10个工作日内安排发货，请耐心等待&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;2、优惠券类奖品的使用规则详见优惠券介绍页&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;3、通过非法途径获得奖品的，主办方有权不提供奖品&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;4、本页面内容由第三方亿玛创新网络（天津）有限公司提供&amp;lt;/p&amp;gt;&lt;/p&gt;","status":1,"templateId":68,"locationAddress":"http://display.adhudong.com/spread/rotary-table.htm","expand1":"1"},{"id":59,"actType":1,"actName":"大转盘旧","bannerImageUrl":"http://img1.adhudong.com/award/201708/21/e70e853666c9ff24fe74f5dcfddd27d1.png","freeNum":3,"beginTime":"2017-08-21 00:00:00","endTime":"2018-02-28 23:59:59","actRuleInfo":"&lt;p&gt;1.天猫红包领取时间：2017年1月6日0点-2017年1月7日24点；&amp;nbsp;&lt;/p&gt;&lt;p&gt;2.天猫红包使用时间：1月8日至1月11日；&amp;nbsp;&lt;/p&gt;&lt;p&gt;3.易购红包为易币（可兑换集分宝，直接购物使用哦），直接发到易购账户中；&amp;nbsp;&lt;/p&gt;&lt;p&gt;4.红包数量有限，先到先得哦，更多精彩，请关注易购app；&amp;nbsp;&lt;/p&gt;&lt;p&gt;5.1月6日0:00-1:00时间段参与领红包的用户中随机抽取一名奖励iPad pro一台；1月6日01:00-10:00时间段参与领红包的用户中随机抽取一名奖励iPad pro一台；1月6日10:00-20:00时间段参与领红包的用户中随机抽取一名奖励iPad pro一台；&amp;nbsp;&lt;/p&gt;&lt;p&gt;6.相同淘宝账号、手机号、支付宝账号均视为同一用户，一旦发现作弊易购网有权取消用户所得；&amp;nbsp;&lt;/p&gt;&lt;p&gt;7. 在易购下单使用淘宝红包无返利哦；&amp;nbsp;&lt;/p&gt;&lt;p&gt;8.本活动最终解释权归易购网所有。1111&lt;/p&gt;","status":1,"templateId":68,"operator":"test","locationAddress":"http://display.adhudong.com/spread/rotary-table.htm","expand1":"2","expand2":"2"},{"id":22,"actType":1,"actName":"Lee-幸运大转盘","bannerImageUrl":"http://img3.adhudong.com/award/201708/21/0c2f2b0dd23c0ff9590c8694b8ba2363.png","coverImageUrl":"https://img1.egou.com/brand/201707/21/2e65d5e09d76cbb655c573da52333f96.png","freeNum":15,"beginTime":"2017-08-08 00:00:00","endTime":"2017-08-31 23:59:59","actRuleInfo":"&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;1.刮刮卡抽奖次数有限，同一用户每天可以进行8次抽奖！&lt;/p&gt;&lt;p&gt;2.转盘奖项设置为3类。&lt;/p&gt;&lt;p&gt;惊喜一：分别是5元、20元话费；&lt;/p&gt;&lt;p&gt;惊喜二：分别是10M和100M流量；&lt;/p&gt;&lt;p&gt;惊喜三：神秘大奖；&lt;/p&gt;&lt;p&gt;3.话费和流量奖请联系客服会直接充值到用户所提供的手机里面；&lt;/p&gt;&lt;p&gt;4.本活动最终解释权归活动方所有；&lt;/p&gt;","status":1,"templateId":55,"operator":"test","locationAddress":"display.adhudong.com/spread/rotary-table.htm","expand1":"1","expand2":"1","expand3":"1","expand4":"1","expand5":"22","expand6":"1","expand7":"1"},{"id":1,"actType":1,"actName":"轮盘抽奖","bannerImageUrl":"http://img0.adhudong.com/award/201708/21/e9297c6142b10afc78c222a8cff15255.jpg","coverImageUrl":"wewe","freeNum":10,"beginTime":"2017-04-25 13:47:05","endTime":"2018-08-26 23:59:59","actRuleInfo":"&lt;p&gt;活动说明：参与活动即有机会获得幸运奖，每天7次免费抽奖机会。此活动为概率中奖，奖品数量有限，祝君好运。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;惊喜一：888元大红包&lt;/li&gt;&lt;li&gt;惊喜二：10元红包&lt;/li&gt;&lt;li&gt;惊喜三：5元红包&lt;/li&gt;&lt;li&gt;惊喜四：2元红包&lt;/li&gt;&lt;li&gt;惊喜五：1元红包&lt;/li&gt;&lt;li&gt;惊喜六：幸运福袋&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;重要声明：&lt;/p&gt;&lt;p&gt;1、实物类奖品将在活动结束后5-10个工作日内安排发货，请耐心等待&lt;/p&gt;&lt;p&gt;2、优惠券类奖品的使用规则详见优惠券介绍页&lt;/p&gt;&lt;p&gt;3、通过非法途径获得奖品的，主办方有权不提供奖品&lt;/p&gt;&lt;p&gt;4、本产品归属亿玛旗下互动推所有&lt;/p&gt;","status":1,"templateId":55,"operator":"test","locationAddress":"display.adhudong.com/spread/rotary-table.htm","expand1":"1","expand5":"2","expand7":"1"}]}}
+请求地址是：http://apidisplay.adhudong.com/activity/act_more.htm?adzone_id=101&amp;adzone_click_id=B3W1CD6H1HM5PG9QWX
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_activity: 活动信息获取接口获取模板信息接口200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":200,"data":{"classifi":1,"actId":59,"logId":"B3W1CD6H1HM5PG9QWX","adzoneId":101,"mediaId":55,"locationAdress":"https://display.adhudong.com/spread/rotary-table.htm"}}
+请求地址是：http://apidisplay.adhudong.com/preload/activity/59.htm?adzoneId=101&amp;logId=B3W1CD6H1HM5PG9QWX
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_award_detail: 广告详情页接口200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":303,"message":"当前中奖记录未找到!"}
+请求地址是：http://apidisplay.adhudong.com/record/award_detail/C3W1CD6H1HLY1FNJZ5.htm?choosen_tag=D3W1CD6R1HLY1FNJZ5
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_goldcoin_ex_list: 可兑换奖品接口200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":200,"data":{"goldcoin_num":0}}
+请求地址是：http://apidisplay.adhudong.com/goldcoin_ex_list.htm?page_num=10&amp;page_size=22
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_jfb_ex_userinfo: 兑换集分宝_用户信息金币兑换集分宝_获取用户信息接口200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":200,"data":{"msg":"用户未绑定支付宝","code":3,"phone":"13638550237"}}
+请求地址是：http://apidisplay.adhudong.com/jfb_ex_userinfo.htm
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_my_gold_list: 我的金币接口200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        pass</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":200,"data":{"goldcoin_num":0,"list":[]}}
+请求地址是：http://apidisplay.adhudong.com/my_gold_list.htm
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_next: 换个活动接口200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+        pass</a>
+
+    <div id='div_pt1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.7: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":200,"data":{"act_id":181,"act_name":"扭蛋新框架","free_num":2,"banner_image_url":"https://img1.adhudong.com/award/201711/21/4b69b1734d769ae4e8a967149f086076.png"}}
+请求地址是：http://apidisplay.adhudong.com/activity/next.htm?act_id=59&amp;adzoneId=101&amp;app_key=adhub3dbfbcee89b4821
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_phone_login_ijf: 手机号注册登录接口 提供了用户基本信息查询功能 200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8')" >
+        pass</a>
+
+    <div id='div_pt1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.8: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":200,"data":{"code":0,"data":54}}
+请求地址是：http://apidisplay.adhudong.com/phone_login_ijf.htm?media_id=2&amp;phone=13621348140&amp;adzone_id=101
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_sign: 签到接口200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9')" >
+        pass</a>
+
+    <div id='div_pt1.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.9: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":200,"data":{"ad_banner_img":"http://img3.adhudong.com/award/201708/21/0c2f2b0dd23c0ff9590c8694b8ba2363.png","award":{"id":449,"awardType":1,"beginTime":"2017-06-10 16:44:11","endTime":"2017-12-31 16:44:11","updateTime":"2017-08-09 13:43:44","createTime":"2017-08-09 13:43:44","awardRate":0,"priority":1,"showCopy":"1金币","awardIcon":"http://img4.adhudong.com/association/201708/08/0204cc5024c4a1bb2b73c8fcb93db4d9.png","actAwardType":12,"awardNum":1,"actId":32},"goldCoinNum":1,"ad_cover_img":"https://img1.egou.com/brand/201707/21/2e65d5e09d76cbb655c573da52333f96.png","sumDays":1,"act_id":"22","ad_name":"Lee-幸运大转盘","locationAdress":"https://apidisplay.adhudong.com/spread/rotary-table.htm"}}
+请求地址是：http://apidisplay.adhudong.com/sign.htm?act_id=32&amp;adzoneId=101
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_times: 换个活动-判断接口200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.10')" >
+        pass</a>
+
+    <div id='div_pt1.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.10: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":200,"data":1}
+请求地址是：http://apidisplay.adhudong.com/activity/times.htm?act_id=59&amp;adzoneId=101
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testactivity: 活动详情接口返回详情200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.11')" >
+        pass</a>
+
+    <div id='div_pt1.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.11: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":200,"data":{"free_num":10,"css":"http://static.adhudong.com/p/discountplus/scratch-card/css/scratch-card-skin1.css","hours":19,"act":{"id":163,"actType":1,"actName":"刮刮卡活动","bannerImageUrl":"https://img3.adhudong.com/award/201709/27/9867c921ca0178820b8a37c677876223.jpg","freeNum":10,"actRuleInfo":"&lt;p&gt;参与活动即有机会获得大奖。活动为概率中奖，奖品数量有限，祝君好运。&lt;/p&gt;&lt;p&gt;惊喜一：1000元现金&lt;/p&gt;&lt;p&gt;惊喜二：500元现金&lt;/p&gt;&lt;p&gt;惊喜三：200元现金&lt;/p&gt;&lt;p&gt;惊喜四：100元现金&lt;/p&gt;&lt;p&gt;惊喜五：50元现金&lt;/p&gt;&lt;p&gt;惊喜六：幸运奖&lt;/p&gt;&lt;p&gt;重要声明：&lt;/p&gt;&lt;p&gt;1、实物类奖品将在活动结束后5-10个工作日内安排发货，请耐心等待&lt;/p&gt;&lt;p&gt;2、卡券类奖品使用规则详见卡券介绍页&lt;/p&gt;&lt;p&gt;3、通过非法途径获得奖品的，主办方有权不提供奖品&lt;/p&gt;","status":1,"templateId":109,"operator":"test","locationAddress":"https://display.adhudong.com/spread/scratch-card.htm","expand1":"1"},"posiList":[{"id":1,"createTime":1493210677000,"operator":"222","status":1,"positionName":"坑位1","positionCargoPrice":1.0,"positionSize":"640x300","positionType":1,"positionNum":1,"templateId":109}],"login_type":0,"awards":[{"award_name":"1000元现金","actAwardType":7,"icon_image_url":"https://img2.adhudong.com/association/201711/09/600ef01b239ed3f4cc6ec3b1931912bc.png","act_award_id":1870},{"award_name":"10G流量卡","actAwardType":7,"icon_image_url":"https://img0.adhudong.com/association/201711/09/351d0d04fc765af2f31416ba4d4870e0.png","act_award_id":1871},{"award_name":"200元现金","actAwardType":7,"icon_image_url":"https://img3.adhudong.com/association/201711/09/1d2c4c844b4ca993ce96f82a03a0171d.png","act_award_id":1872},{"award_name":"再抽一次","actAwardType":5,"icon_image_url":"https://img1.adhudong.com/association/201709/27/ccbf0c854ab6bb9e833c88b603045a2b.png","act_award_id":1873},{"award_name":"幸运奖","actAwardType":5,"icon_image_url":"https://img0.adhudong.com/association/201709/27/927dbf1616070fcf080f03fb7a057e80.png","act_award_id":1876},{"award_name":"再抽一次","actAwardType":5,"icon_image_url":"https://img1.adhudong.com/association/201709/27/ccbf0c854ab6bb9e833c88b603045a2b.png","act_award_id":1874},{"award_name":"谢谢参与","actAwardType":6,"icon_image_url":"https://img3.adhudong.com/association/201709/27/c5500a1959243ce379fd7ad2195783b8.png","act_award_id":1875},{"award_name":"幸运奖","actAwardType":7,"icon_image_url":"https://img2.adhudong.com/association/201711/09/d3806c17fb4f0904ce66980aa494db02.png","act_award_id":1877}],"logId":"B3W1CD6H1HJXPHGC01","redPack":"1","adzone":{"id":101,"createTime":"2017-06-05 19:52:50","updateTime":"2017-12-01 17:48:47","operator":"test","status":1,"adzoneName":"邓今毅101广告位","mediaId":55,"adFilterType":1,"adFilterContent":"[41,42,44]","urlFilter":1,"urlFilterContent":"http://www.baidu.com,http://www.egou.com","beginTime":"2017-11-01 00:00:00","endTime":"2020-12-31 23:59:59","appKey":"adhub3dbfbcee89b4821","secret":"b9e0e513d7a7fac7b29c4cfe82947f1d","specifyActType":1}}}
+请求地址是：http://apidisplay.adhudong.com/activity/163.htm?adzoneId=101&amp;logId=B3W1CD6H1HJXPHGC01
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testlottery: 出广告跳转链接200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.12')" >
+        pass</a>
+
+    <div id='div_pt1.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.12: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":200,"data":{"record_id":"C3W1CD6H1HM612KWJL","ad":{"adtype":1,"ad_brief_introduction":"广告主202创意简介1","ad_id":826,"ad_jumpDirectly":1,"choosen_tag":"D3W1CD6R1HM612KWJL","ad_url":"https://bid1.adhudong.com/bridge.do?ip=172.16.148.119&amp;agent=python-requests%2F2.11.1&amp;refer=&amp;mediaId=55&amp;adZoneId=101&amp;actId=145&amp;adPlanId=150&amp;adOrderId=948&amp;adCreativeId=826&amp;userCookie=Mi8vMTAxLy8yLy8yLy81NzU2Ly8xNTEyNTU5NjIyMDY4Ly8wNDU4ZDQxMzIyMTA3ZjhjZjQyNTQxMjM0N2MzMDI0ZS8vZWQxNGZjNTFmYTM=&amp;adLinkUrl=http%3A%2F%2Fwww.zaobao.com%2Fdddd%3D%24%7Bclick_tag%7D&amp;chargeType=2&amp;advertiserId=202&amp;adChoosenTag=D3W1CD6R1HM612KWJL&amp;adzoneClickId=B3W1CD6H1HJX1DKRHD&amp;invalid_message=&amp;isCharge=1&amp;logType=2&amp;status=1&amp;positionId=1&amp;occurrence=0","ad_name":"广告主202创意订单1","ad_image_url":"https://img4.adhudong.com/creative/201711/13/0b498fa8e0bf572ede8bd22e8c3597ce.png"},"lottery_left_times":7,"act_award_id":2190,"award_type":7,"token":"fbc586ae-62d7-4baa-a517-cc7f94cf7669"}}
+请求地址是：http://apidisplay.adhudong.com/lottery.htm?act_id=145&amp;adzone_click_id=B3W1CD6H1HJX1DKRHD&amp;device=IOS
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testlottery_list: 我的奖品页面是否返回200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.13')" >
+        pass</a>
+
+    <div id='div_pt1.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.13: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":200,"data":[]}
+请求地址是：http://apidisplay.adhudong.com/record/lottery_list.htm?logId=B3W1CD6H1HJ9X99JUP&amp;mediaId=55
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.14' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testnoticelist: 虚假的中奖信息接口 是否返回200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.14')" >
+        pass</a>
+
+    <div id='div_pt1.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.14: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":200,"data":["139**5654获得了2G流量","139**3473获得了50元话费","131**3809获得了50元话费","132**6853获得了2G流量","152**9009获得了50元话费","157**6396获得了50元话费","185**5465获得了2G流量","183**1501获得了50元话费","132**2492获得了50元话费","133**4356获得了2G流量"]}
+请求地址是：http://apidisplay.adhudong.com/notice/list.htm?adzoneId=101&amp;act_id=166
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testrecommended: 广告位上返回活动信息是否返回200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.15')" >
+        pass</a>
+
+    <div id='div_pt1.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.15: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":200,"data":[{"act_id":181,"act_name":"扭蛋新框架","free_num":2,"banner_image_url":"https://img1.adhudong.com/award/201711/21/4b69b1734d769ae4e8a967149f086076.png","type":"act"},{"act_id":34,"act_name":"就爱现金_test2","banner_image_url":"https://img0.adhudong.com/award/201711/30/eede17507b7f1f69cb3b4a456c757caf.jpg","type":"act"}]}
+请求地址是：http://apidisplay.adhudong.com/activity/recommended.htm?act_id=168&amp;adzone_id=101
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.16' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testuser_lottery_info: 刷新活动页面接口接口200</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.16')" >
+        pass</a>
+
+    <div id='div_pt1.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.16: C:\Python27\lib\site-packages\requests\packages\urllib3\connectionpool.py:838: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/security.html
+  InsecureRequestWarning)
+{"code":200,"data":{"lottery_left_times":10}}
+请求地址是：http://apidisplay.adhudong.com/user_lottery_info.htm?act_id=163&amp;adzoneId=101&amp;timeSign=1510811182682
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>16</td>
+    <td>16</td>
+    <td>0</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>

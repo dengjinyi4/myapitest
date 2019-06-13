@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//passport/common/mysql.py=UTF-8
+encoding//testcase/checkimagecode.py=utf-8
+encoding//testcase/checkphone.py=utf-8
+encoding//testcase/checkuser.py=utf-8
+encoding//testcase/phone_msg_login.py=utf-8
+encoding//testcase/phone_msg_register.py=utf-8
+encoding//testcase/sendmessage.py=utf-8
+encoding//testcase/userlogin.py=utf-8
+encoding/Emar_SendMail_Attachments.py=utf-8
+encoding/testemail.py=utf-8
